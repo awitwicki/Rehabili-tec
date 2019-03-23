@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public TMP_Text scoreDisplay;
     public PlayableDirector timeline;
+    public GameObject WinPanel;
 
     private int scoreCount  = 0;
     public int ScoreCount
@@ -33,6 +34,10 @@ public class GameManager : MonoBehaviour
     public void UpdateScore()
     {
         scoreDisplay.text = "Twój Wynik: " + scoreCount.ToString();
+        if (scoreCount == 4) 
+        {
+            Invoke("Win", 6.5f);
+        }
     }
 
     public void StartLevel()
@@ -44,7 +49,11 @@ public class GameManager : MonoBehaviour
         timeline.Play();
     }
 
-
+    public void Win()
+    {
+     
+        WinPanel.SetActive(true);
+    }
     
 
 }
