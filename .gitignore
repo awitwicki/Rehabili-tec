@@ -6,3 +6,6 @@ Unity/Rehabili-tec/Library/ShaderCache/
 Unity/Rehabili-tec/Logs/
 Unity/Rehabili-tec/Library/ScriptAssemblies/
 Unity/Rehabili-tec/Library/
+Unity/Rehabili-tec/.vs/
+Unity/Rehabili-tec/obj/
+*.csproj
