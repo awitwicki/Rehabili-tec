@@ -1,0 +1,6 @@
+*.meta
+Unity/Rehabili-tec/Library/metadata/
+Unity/Rehabili-tec/Library/PackageCache/
+Unity/Rehabili-tec/Temp/
+Unity/Rehabili-tec/Library/ShaderCache/
+Unity/Rehabili-tec/Logs/
