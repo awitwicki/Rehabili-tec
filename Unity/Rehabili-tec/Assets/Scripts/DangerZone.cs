@@ -9,11 +9,17 @@ public class DangerZone : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
-            StartCoroutine(SpawnObstacleWave());
+        if (Input.GetKeyDown(KeyCode.Space))
+            SpawnObs();
     }
 
-    public IEnumerator SpawnObstacleWave()
+    public void SpawnObs()
+    {
+        StopAllCoroutines();
+        StartCoroutine(SpawnObstacleWave());
+    }
+
+    IEnumerator SpawnObstacleWave()
     {
         foreach (Transform t in obstacleSpawnerTransforms)
         {
