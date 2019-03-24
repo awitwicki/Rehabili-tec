@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public HandTriggerCheck[] hands = new HandTriggerCheck[2]; 
+
     public float speed;
     public Vector2 movDir;
     public ParticleSystem rewardSytem;
 
     private void Update()
     {
-        movDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (hands[0].active)
+        {
+            movDir.x = -1;
+        }
+
+
+        if (hands[1].active)
+        {
+            movDir.x = 1;
+        }
+
+        if (!hands[0].active && !hands[1].active)
+        {
+            movDir.x = 0;
+        }
+
+
+       // movDir = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
         transform.Translate(movDir * Time.deltaTime * speed);
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-7f,7f),-3.37f,0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

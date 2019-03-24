@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: fba264e02366f8b45bff89491c8fd36d
+  - enabled: 1
+    path: Assets/Scenes/SpaceArmRot.unity
+    guid: 863300e9ec76eed4db700eb0e1473a48
   m_configObjects: {}

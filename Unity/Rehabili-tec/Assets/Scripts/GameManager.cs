@@ -36,13 +36,13 @@ public class GameManager : MonoBehaviour
         scoreDisplay.text = "Twój Wynik: " + scoreCount.ToString();
         if (scoreCount == 4) 
         {
-            Invoke("Win", 6.5f);
+            Invoke("Win", 8f);
         }
     }
 
     public void StartLevel()
     {
-        Invoke("StartDelayedLevel", 2f);
+        Invoke("StartDelayedLevel", 3f);
     }
     public void StartDelayedLevel()
     {
